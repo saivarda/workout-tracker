@@ -27,6 +27,11 @@ public class WorkoutController {
         return workoutService.createExercise(exercise);
     }
 
+    @DeleteMapping("/exercises/{id}")
+    public void deleteExercise(@PathVariable Long id) {
+        workoutService.deleteExercise(id);
+    }
+
     @GetMapping("/sessions")
     public List<WorkoutSession> getSessions() {
         return workoutService.getAllSessions();

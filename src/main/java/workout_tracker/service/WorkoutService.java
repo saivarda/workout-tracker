@@ -23,6 +23,7 @@ public class WorkoutService {
     public List<Exercise> getAllExercises() { return exerciseRepository.findAll(); }
     public List<Exercise> getExercisesByMuscleGroup(String muscleGroup) { return exerciseRepository.findByMuscleGroup(muscleGroup); }
     public Exercise createExercise(Exercise exercise) { return exerciseRepository.save(exercise); }
+    public void deleteExercise(Long id) { exerciseRepository.deleteById(id); }
     public List<WorkoutSession> getAllSessions() { return sessionRepository.findAllByOrderByDateDesc(); }
     public WorkoutSession getSessionById(Long id) { return sessionRepository.findById(id).orElseThrow(() -> new RuntimeException("Session not found")); }
     public WorkoutSession createSession(WorkoutSession session) { return sessionRepository.save(session); }
