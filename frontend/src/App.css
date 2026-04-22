@@ -70,3 +70,13 @@ body { background: #0a0a0a; color: #fff; font-family: -apple-system, BlinkMacSys
 
 /* Empty */
 .empty { text-align: center; color: #333; padding: 40px 0; font-size: 0.9rem; }
+
+/* Mobile */
+@media (max-width: 600px) {
+  .app { padding: 0 16px 80px; }
+  .nav { padding: 16px 0; }
+  .page-title { font-size: 1.6rem; }
+  .exercise-grid { grid-template-columns: 1fr; }
+  .input-row { grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+  .nav-btn { padding: 7px 12px; font-size: 0.8rem; }
+}
