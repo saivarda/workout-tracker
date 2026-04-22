@@ -1,3 +1,16 @@
 spring:
   application:
     name: workout-tracker
+  datasource:
+    url: jdbc:postgresql://aws-1-us-east-2.pooler.supabase.com:5432/postgres?user=postgres.rubjprphqoatsjbkcick&password=vunhyw-6murxi-Wohfuc
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8080
